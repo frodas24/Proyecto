@@ -1,0 +1,170 @@
+#screamer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#video-sream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.group-btn{
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: green;
+    color: purple;
+}
+
+body{
+    background-color: rgb(255, 167, 2);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+header{
+    background-color: rgb(27, 19, 19);
+    padding: 25px;
+    text-align: center;
+    color: rgb(255, 167, 2);
+}
+
+main{
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.fantasma {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 100px; 
+    background-color: white; 
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    z-index: 10;
+}
+
+.fantasma-zquierda {
+    left: 20px;
+}
+
+.fantasma-derecha {
+    right: 20px;
+}
+
+.fantasma::before,
+.fantasma::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.fantasma::before {
+    left: 20px;
+}
+
+.fantasma::after {
+    right: 20px;
+}
+
+.decoracion {
+    position: absolute;
+    z-index: 5;
+}
+
+.calavera {
+    width: 50px;
+    height: 50px;
+    background-image: url('calavera.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.calavera-esquina {
+    top: 50px;
+    left: 50px;
+}
+
+.arana-cuelga {
+    position: absolute;
+    top: 0; 
+    right: 150px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    animation: columpio 4s ease-in-out infinite alternate;
+    transform-origin: top center; 
+}
+
+.arana-cuelga::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    width: 1px;
+    height: 100px; 
+    background: #CCCCCC;
+    z-index: -1;
+}
+
+.arana-cuelga::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    box-shadow: 
+        -18px -5px 0 1px black, 
+        -22px 5px 0 1px black,  
+        -20px 15px 0 1px black, 
+        -10px 22px 0 1px black,  
+        18px -5px 0 1px black,
+        22px 5px 0 1px black,    
+        20px 15px 0 1px black,   
+        10px 22px 0 1px black;   
+    width: 1px; 
+    height: 1px;
+}
+
+@keyframes columpio {
+    0% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
